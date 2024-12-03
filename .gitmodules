@@ -1,0 +1,6 @@
+[submodule "chat-app"]
+	path = chat-app
+	url = https://github.com/Nazichok/chat-app.git
+[submodule "server"]
+	path = server
+	url = https://github.com/Nazichok/server.git
