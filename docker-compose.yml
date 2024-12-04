@@ -1,0 +1,21 @@
+services:
+  frontend:
+    build:
+      context: "./chat-app"
+      dockerfile: "./Dockerfile"
+      target: dev
+    ports:
+      - 4200:4200
+    volumes:
+      - ./chat-app:/usr/src/app
+      - /usr/src/app/node_modules
+  backend:
+    build:
+      context: "./server"
+      dockerfile: "./Dockerfile"
+      target: dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
